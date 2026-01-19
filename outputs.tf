@@ -20,3 +20,9 @@ output "nsg_name" {
   description = "Web tier NSG name"
   value       = azurerm_network_security_group.web_nsg_vj.name
 }
+
+output "nsg_id" {
+  description = "Web tier NSG ID"
+  value       = azurerm_network_security_group.web_nsg_vj.id
+}
+
