@@ -26,3 +26,11 @@ output "nsg_id" {
   value       = azurerm_network_security_group.web_nsg_vj.id
 }
 
+output "nsg_rules" {
+  description = "Web tier NSG rules"
+  value = {
+    http  = azurerm_network_security_rule.allow_http_us.name
+    https = azurerm_network_security_rule.allow_https_sec.name
+    ssh   = azurerm_network_security_rule.allow_ssh_sec.name
+  }
+}
